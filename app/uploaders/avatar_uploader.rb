@@ -50,15 +50,15 @@ class AvatarUploader < CarrierWave::Uploader::Base
     storage:file
   end
   
-  process :conver => 'png'
-  proces :tags => ['avatar']
+  #process :conver => 'png'
+  #process :tags => ['avatar']
   
-  version :standard do 
-    process :resize_to_fill => [100, 150, :north]
-  end 
-  version :thumnail do 
-    process :resize_to_fit => [50, 50]
-  end
+  #version :standard do 
+   # process :resize_to_fill => [100, 150, :north]
+  #end 
+  #version :thumnail do 
+   # process :resize_to_fit => [50, 50]
+  #end
   def public_id
     model.id
   end

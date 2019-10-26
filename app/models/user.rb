@@ -6,7 +6,6 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
     has_secure_password
     
-    attr_acessor :avatar
     mount_uploader :avatar, AvatarUploader
     
     has_many :microposts

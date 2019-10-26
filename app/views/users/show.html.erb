@@ -11,11 +11,9 @@
             </div>
         </div>
         <%= render 'relationships/follow_button', user: @user %>
-        <%= image_tag(@user.avatar_url) %>
         <div>
-            <%= image_tag(@user.avatar.url(:thumnail), :width => 80, :height => 80) %>
-            <%= f.label '画像登録' %>
-            <%= f.file_field :avatar %>
+            <%= image_tag(@user.avatar.url, :width => 80, :height => 80) %>
+            <%= link_to 'edit profile', edit_user_path(@user)%>
         </div>
         
     </aside>

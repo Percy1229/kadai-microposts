@@ -1,19 +1,18 @@
 ---
 development:
-  cloud_name: dbjdtcebw
-  api_key: '483254376947453'
-  api_secret: nn3TvTZQ-QA_YSlYoaDhilKzEHw
+  cloud_name: <%= ENV['CLOUDINARY_CLOUD_NAME'] %>
+  api_key: <%= ENV["CLOUDINARY_API_KEY"] %>
+  api_secret: <%= ENV["CLOUDINARY_API_SECRET"] %>
   enhance_image_tag: true
   static_file_support: false
 production:
-  cloud_name: dbjdtcebw
-  api_key: '483254376947453'
-  api_secret: nn3TvTZQ-QA_YSlYoaDhilKzEHw
+  cloud_name: <%= ENV['CLOUDINARY_CLOUD_NAME'] %>
+  api_key: <%= ENV["CLOUDINARY_API_KEY"] %>
+  api_secret: <%= ENV["CLOUDINARY_API_SECRET"] %>
   enhance_image_tag: true
   static_file_support: true
 test:
-  cloud_name: dbjdtcebw
-  api_key: '483254376947453'
-  api_secret: nn3TvTZQ-QA_YSlYoaDhilKzEHw
-  enhance_image_tag: true
+  cloud_name: <%= ENV['CLOUDINARY_CLOUD_NAME'] %>
+  api_key:  <%= ENV["CLOUDINARY_API_KEY"] %>
+  api_secret: <%= ENV["CLOUDINARY_API_SECRET"] %>
   static_file_support: false
