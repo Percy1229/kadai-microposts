@@ -11,6 +11,13 @@
             </div>
         </div>
         <%= render 'relationships/follow_button', user: @user %>
+        <%= image_tag(@user.avatar_url) %>
+        <div>
+            <%= image_tag(@user.avatar.url(:thumnail), :width => 80, :height => 80) %>
+            <%= f.label '画像登録' %>
+            <%= f.file_field :avatar %>
+        </div>
+        
     </aside>
     <div class="col-sm-8">
         <ul class="nav nav-tabs nav-justified mb-3">
