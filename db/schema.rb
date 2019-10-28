@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2019_10_26_094804) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "avatar"
+    t.string "avatar", default: "default.png"
   end
 
   add_foreign_key "favorites", "microposts"

@@ -12,7 +12,11 @@
         </div>
         <%= render 'relationships/follow_button', user: @user %>
         <div>
+            <% if @user.avatar? %> 
             <%= image_tag(@user.avatar_url) %>
+            <% else %>
+            <%= image_tag('default.png') %>
+            <% end %>
             <%= link_to 'edit profile', edit_user_path(@user)%>
         </div>
         
